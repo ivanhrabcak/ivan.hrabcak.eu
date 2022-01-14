@@ -15,20 +15,22 @@ const RepositoryCard = ({ repositoryData }) => {
                 
                 <description>{ repositoryData.description ? repositoryData.description : 'No description' }</description>
 
-                <stars>
-                    Stars: { repositoryData.stargazers_count }
-                    <StarIcon />
-                </stars>
+                <repostats>
+                    <stars>
+                        Stars: { repositoryData.stargazers_count }
+                        <StarIcon />
+                    </stars>
 
-                <language>
-                    <langname>Language:</langname>
-                    { repositoryData.language ? <img 
-                                                    onError={tryAlternativeIcon} 
-                                                    alt={language} title={language} 
-                                                    className="language-icon" 
-                                                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${language}/${language}-original.svg`} /> 
-                                                : <div>Unknown Lanugage</div> }
-                </language>
+                    <language>
+                        <langname>Language:</langname>
+                        { repositoryData.language ? <img 
+                                                        onError={tryAlternativeIcon} 
+                                                        alt={language} title={language} 
+                                                        className="language-icon" 
+                                                        src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${language}/${language}-original.svg`} /> 
+                                                    : <div>Unknown Lanugage</div> }
+                    </language>
+                </repostats>
             </content>
         </div>
     )

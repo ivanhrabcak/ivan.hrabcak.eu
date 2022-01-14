@@ -1,4 +1,4 @@
-const BACKEND_URL = `http://localhost:8080`;
+const BACKEND_URL = `https://hrabcak-eu-portfolio-backend.herokuapp.com`
 
 const url = (path) => `${BACKEND_URL}${path}`
 
@@ -29,4 +29,10 @@ const getTotalStars = async () => {
     return await response.json()
 }
 
-export { getMostStarredRepository, getLargestRepository, getLastPushedRepository, getTotalStars }
+const getUserData = async () => {
+    const response = await fetch(url('/info'))
+
+    return await response.json()
+}
+
+export { getMostStarredRepository, getLargestRepository, getLastPushedRepository, getTotalStars, getUserData }
