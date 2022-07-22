@@ -1,13 +1,94 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    padding-bottom: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.horrid-background {
+    background-color: darkblue;
+}
+
+.horrid-border {
+    border: 3px dotted yellow;
+}
+
+.yellow {
+    color: yellow
+}
+
+.title {
+    font-size: 50px;
+}
+
+.text-container {
+    display: flex;
+    align-self: center;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.link {
+    color: lightblue;
+}
+
+.comparison-divider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.image {
+    border: 2px solid gold;
+    height: 180px;
+    aspect-ratio: 1;
+}
+
+.list {
+    padding: 10px;
+    display: flex;
+    background-color: red;
+    flex-direction: column;
+    color: greenyellow;
+}
+
+card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gold;
+    border-radius: 100%;
+    padding: 50px;
+    gap: 10px;
+    height: fit-content;
+}
+
+.project-title {
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.cards {
+    display: grid;
+    cursor: pointer;
+    gap: 20px;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 200px 200px;
+
+    margin: 10px;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.spaced {
+    gap: 5px;
 }
